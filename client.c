@@ -57,10 +57,11 @@ int main(int argc, char *argv[])
 
 	state.surface = wl_compositor_create_surface(state.compositor);
 
+	wl_surface_commit(state.surface);
+
 	while(wl_display_dispatch(state.display)) {
 		
 	}
-
 	printf("%p\n", state.surface);
 
 	return EXIT_SUCCESS;
